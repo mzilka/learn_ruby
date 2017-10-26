@@ -2,7 +2,7 @@
 #	Created by Bombura
 #	Version: 0.0.1
 #	Usage: insert values into ssh config file manually
-#	enter values when asked by scrit
+#	enter values when asked by script
 
 subor = `echo $HOME`
 sub = subor.chomp
