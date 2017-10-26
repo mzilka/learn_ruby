@@ -1,25 +1,26 @@
 #!/usr/bin/env ruby
 #	Created by Bombura
 #	Version: 0.0.1
-#	Usage: template for ruby scripts
+#	Usage: insert values into ssh config file manually
+#	enter values when asked by scrit
 
 subor = `echo $HOME`
 sub = subor.chomp
-conf = sub + '/.ssh/config'
+conf = sub + '/.ssh/config.test'
 #check or create config file
 if File.exists?  conf then
-	puts "ssh config file exist"
+	puts "ssh config.test file exist"
 else
 	File.open(conf, 'w')
-	puts "new config file created"
+	puts "new config.test file created"
 end
 print "Insert Hostname and short name: "
 h = gets.chomp
 print "Insert IP address: "
 n = gets.chomp
-print = "Insert Username: "
+print "Insert Username: "
 u = gets.chomp
-print = "Insert Port Number: "
+print "Insert Port Number: "
 p = gets.chomp
 open(conf, "a") { |f|
 f << "Host " + h + "\n"
